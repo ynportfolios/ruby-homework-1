@@ -42,27 +42,26 @@ class Janken
     # 変数「janken」に["グー", "チョキ", "パー"]を代入します。
     janken = ["グー", "チョキ", "パー"]
     #「相手の手は#{敵の生成した値}です。」と出力させます。
-    puts "相手の手は#{janken[enemy_hand]}です。"
-    puts "あなたの手は#{janken[player_hand]}です。"
+    print "相手の手は#{janken[enemy_hand]}です。"
     # Playerクラスの戻り値とEnemyクラスの戻り値からじゃんけんするロジックを作成します。
       # 以降の型の例に沿って実装しましょう ※実装する時場合はコメントアウトに注意しましょう
       # if 条件を書く Playerクラスの戻り値(player_hand)とEnemyクラスの戻り値(enemy_hand)の値が同じだった場合
       if player_hand == enemy_hand
       # 「あいこ」を出力します。
-        puts "あいこ"
+        puts "あいこです。"
       #「true」を返してじゃんけんを繰り返し実行させます。
         # ヒント！ 「return」を使用します。
         return true
     #  elsif もしも下記の組み合わせだった場合
       elsif (player_hand == 0 && enemy_hand == 1) || (player_hand == 1 && enemy_hand == 2) || (player_hand == 2 && enemy_hand == 0)
       # 「あなたの勝ちです」を出力します。
-        puts "あなたの勝ちです"
+        puts "あなたの勝ちです。"
       # whileを終了させる「false」を返してじゃんけんを終了させます。
         return false
     #  else ※条件以外の場合
       else
       # 「あなたの負けです」を出力します。
-        puts "あなたの負けです"
+        puts "あなたの負けです。"
       # whileを終了させる「false」を返してじゃんけんを終了させます。
         return false
     # end if文のend
