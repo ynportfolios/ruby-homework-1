@@ -6,23 +6,23 @@ class Player
     puts "0:グー, 1:チョキ, 2:パー"
     # 変数「input_hand」にプレイヤーが入力したものを取得して代入します。
       # ヒント! 「getsメソッド」を使用します。
-    input_hand = gets.to_i
+    input_hand = gets.chomp
     # 「input_hand」(取得した値)が「0, 1, 2」のいずれかだとwhileから脱出させ、それ以外だと初めから繰り返させます。
       # ヒント! 「while」と「if」を使用します。
       # 以降の型の例に沿って実装しましょう ※実装する時場合はコメントアウトに注意しましょう
       while true
         # if 条件を書く (「input_hand」(取得した値)が「0, 1, 2」のいずれかの場合だった場合)
-        if input_hand == 0 || input_hand == 1 || input_hand == 2
+        if (input_hand == "0") || (input_hand == "1") || (input_hand == "2")
           # 「input_hand」(取得した値)をそのまま返します。
             # ヒント！ 「return」を使用します。
-            return input_hand
+            return input_hand.to_i
         # else ※条件以外の場合
         else
           # 「プレイヤーに 0 ~ 2を入力させる文章」を表示させます。
           puts "もう一度数字を入力してください。"
           puts "0:グー, 1:チョキ, 2:パー"
           # 変数「input_hand」にプレイヤーが入力したものを取得して代入します。
-          input_hand = gets.to_i
+          input_hand = gets.chomp
         # end if文のend
         end
       # end while文のend
@@ -42,6 +42,7 @@ class Janken
     # 変数「janken」に["グー", "チョキ", "パー"]を代入します。
     janken = ["グー", "チョキ", "パー"]
     #「相手の手は#{敵の生成した値}です。」と出力させます。
+    puts ""
     print "相手の手は#{janken[enemy_hand]}です。"
     # Playerクラスの戻り値とEnemyクラスの戻り値からじゃんけんするロジックを作成します。
       # 以降の型の例に沿って実装しましょう ※実装する時場合はコメントアウトに注意しましょう
